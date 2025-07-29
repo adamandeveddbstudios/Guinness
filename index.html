@@ -28,27 +28,61 @@
       .logo svg {
         width: 200px;
       }
-      h1 {
+      .headline {
         text-align: center;
-        color: #fff;
+        color: #f4cb84;
         text-transform: uppercase;
-
+        font-weight: bold;
         padding-top: 50px;
         font-size: 100px;
         margin-bottom: 50px;
+        text-shadow: #3b1e01 -5px 5px 0px;
       }
       .link {
         text-align: center;
         margin-bottom: 30px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
       }
       .link a {
-        background-color: #000;
+        background-color: #f4cb84;
         display: inline-block;
         text-decoration: none;
         padding: 12px 30px;
-        color: #fff;
-        border-radius: 4px;
+        color: #000;
+        border-radius: 8px;
         font-size: 25px;
+        position: relative;
+        transition: all 0.3s ease;
+        z-index: 0;
+        overflow: hidden;
+        box-shadow: #3b1e01 -5px 5px 0px;
+        border: #281608 solid 1px;
+      }
+      .link a::before {
+        content: "";
+        position: absolute;
+        bottom: -32px;
+        transition: all 0.3s ease;
+        background-color: #f2f2e7;
+        width: 30px;
+        height: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        border-radius: 50px;
+      }
+      .link a:hover {
+        color: #000;
+      }
+      .link a:hover::before {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        left: 0px;
+        transform: inherit;
+        bottom: 0px;
       }
       .link a small {
         font-size: 12px;
@@ -60,7 +94,7 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="init();">
     <video
       autoplay=""
       loop=""
@@ -106,7 +140,7 @@
           ></path>
         </svg>
       </div>
-      <h1>Club Agnostic</h1>
+      <div class="headline">Club Agnostic</div>
       <!-- <p>Old - The first frame stayed for 1.40 seconds.</p>
       <div class="link">
         <a target="_blank" href="./Old/300x250/index.html"
@@ -132,5 +166,48 @@
         >
       </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+    <script>
+      gsap.registerPlugin(SplitText);
+      let tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+      console.log(tl);
+
+      let split = SplitText.create(".headline", {
+        type: "words, chars",
+        charsClass: "char",
+      });
+
+      function init() {
+        // Reset visibility
+        tl.set(".headline .char", { autoAlpha: 0 });
+
+        // Animate IN
+        tl.fromTo(
+          ".headline .char",
+          { scale: 2.1, x: 300, autoAlpha: 0 },
+          {
+            scale: 1,
+            x: 0,
+            autoAlpha: 1,
+            ease: "power1.out",
+            stagger: 0.05,
+          }
+        );
+
+        // Hold for a moment
+        tl.to(".headline .char", { duration: 5, autoAlpha: 1 }); // Pause visibly
+
+        // Animate OUT
+        tl.to(".headline .char", {
+          autoAlpha: 0,
+          scale: 0.8,
+          x: -50,
+          ease: "power1.in",
+          stagger: 0.04,
+        });
+      }
+    </script>
   </body>
 </html>
