@@ -20,10 +20,10 @@ function init() {
 function animate() {
   tl.set("#main", { autoAlpha: 1, force3D: true });
   tl.set("#bg", { transformPerspective: 1000, force3D: true });
-  tl.to(".copy", 0.5, { autoAlpha: 0, ease: Power1.easeInOut }, 2.5);
+  tl.to(".copy", 0.5, { autoAlpha: 0, ease: Power1.easeInOut }, 1.5);
   tl.to(
     "#bg",
-    1.5,
+    3,
     { x: -191, y: 0, ease: Power1.easeInOut, force3D: true },
     "<"
   );
