@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="ad.size" content="width=300,height=250" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript">
+      var clickTag = "https://www.google.com/";
+    </script>
+  </head>
+  <body onload="init();">
+    <div id="main">
+      <!-- <img
+        src="images/Frame1.jpg"
+        class="full-width"
+        style="opacity: 0.5; z-index: 11"
+        alt=""
+      /> -->
+      <img src="images/bg.jpg" class="bg" id="bg" alt="" />
+      <img src="images/copy.png" class="full-width copy" alt="" />
+      <img src="images/last-line.svg" class="lastLine hidden" alt="" />
+      <img src="images/logo.svg" class="logo hidden" alt="" />
+      <!-- <div class="images">
+        <img src="images/pick-1.jpg" class="pick" alt="" />
+        <img src="images/pick-2.jpg" class="pick" alt="" />
+        <img src="images/pick-3.jpg" class="pick" alt="" />
+        <img src="images/pick-4.jpg" class="pick" alt="" />
+      </div> -->
+
+      <div id="default_exit" class="btn"></div>
+    </div>
+
+    <div class="container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+      var clickArea = document.getElementById("default_exit");
+      clickArea.onclick = function () {
+        window.open(clickTag);
+      };
+    </script>
+  </body>
+</html>
