@@ -23,7 +23,7 @@ function animate() {
   tl.to(".copy", 0.5, { autoAlpha: 0, ease: Power1.easeInOut }, 1.5);
   tl.to(
     "#bg",
-    8,
+    6,
     { x: -191, y: 0, ease: Power1.easeInOut, force3D: true },
     "<"
   );
