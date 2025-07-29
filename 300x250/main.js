@@ -19,9 +19,14 @@ function init() {
 
 function animate() {
   tl.set("#main", { autoAlpha: 1, force3D: true });
-  tl.set("#bg", { force3D: true });
+  tl.set("#bg", { transformPerspective: 1000, force3D: true });
   tl.to(".copy", 0.5, { autoAlpha: 0, ease: Power1.easeInOut }, 1.5);
-  tl.to("#bg", 10, { x: "-191px", y: "0", ease: Power1.easeInOut }, "<");
+  tl.to(
+    "#bg",
+    8,
+    { x: -191, y: 0, ease: Power1.easeInOut, force3D: true },
+    "<"
+  );
   tl.to([".lastLine, .logo"], 0.5, { autoAlpha: 1, ease: Power1.easeInOut });
   // tl.to("#cta", 0.5, { autoAlpha: 1 }, 4);
 }

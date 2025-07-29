@@ -53,7 +53,8 @@ html, body {
 .bg{
     width: 538px;
     position: absolute;
-    transform: translate(-34px, -45px); /* replaces left/top */
+    /* transform: translate(-34px, -45px); */
+    transform: translate3d(-34px, -45px, 0);
     will-change: transform;
 }
 .lastLine{
