@@ -20,14 +20,19 @@ function init() {
 function animate() {
   tl.set("#main", { autoAlpha: 1, force3D: true });
   tl.set("#bg", { transformPerspective: 1000, force3D: true });
-  tl.to(".copy", 0.5, { autoAlpha: 0, ease: Power1.easeInOut }, 2.5);
+  tl.to(
+    [".lastLine, .logo"],
+    0.5,
+    { autoAlpha: 0, ease: Power1.easeInOut },
+    "+=2.5"
+  );
   tl.to(
     "#bg",
-    5,
-    { x: -191, y: 0, ease: Power1.easeInOut, force3D: true },
+    3,
+    { x: -34, y: -45, ease: Power1.easeInOut, force3D: true },
     "<"
   );
-  tl.to([".lastLine, .logo"], 0.5, { autoAlpha: 1, ease: Power1.easeInOut });
+  tl.to(".copy", 0.5, { autoAlpha: 1, ease: Power1.easeInOut }, "+=0.05");
 }
 
 function randomInt(min, max) {

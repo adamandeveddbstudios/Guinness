@@ -1,10 +1,10 @@
 
-/* @font-face {
-  font-family: 'Knockout';
-  src: url('fonts/subset-Knockout-HTF50-Welterweight.woff') format('woff');
+@font-face {
+  font-family: 'ZinDisplay';
+  src: url('fonts/subset-ZinDisplay-Demo.woff') format('woff');
   font-style: normal;
   font-display: swap;
-} */
+}
 * {
   box-sizing: border-box;
 }
@@ -53,8 +53,8 @@ html, body {
 .bg{
     width: 538px;
     position: absolute;
-    /* transform: translate(-34px, -45px); */
-    transform: translate3d(-34px, -45px, 0);
+    /* transform: translate3d(-34px, -45px, 0); */
+    transform: translate3d(-191px, 0, 0);
     will-change: transform;
 }
 .lastLine{
@@ -63,9 +63,20 @@ html, body {
     left: 70px;
     top: 162px;
 }
-/* .copy{
-      filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
-} */
+.copy{
+  font-family: 'ZinDisplay';
+  color: #fff;
+  font-size: 21.2px;
+  position: absolute;
+  left: 35px;
+  top: 79px;
+}
+.combineLogo{
+  position: absolute;
+  width: 75px;
+  top: 196px;
+  left: 209px;
+}
 .logo{
   width: 125px;
   position: absolute;

@@ -64,6 +64,7 @@
         overflow: hidden;
         box-shadow: #3b1e01 -5px 5px 0px;
         border: #281608 solid 1px;
+        position: relative;
       }
       .link a::before {
         content: "";
@@ -92,10 +93,19 @@
       .link a small {
         font-size: 12px;
       }
+      .link a .op {
+        position: absolute;
+        left: 0px;
+        bottom: 2px;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+      }
       p {
         text-align: center;
         color: #fff;
         margin-bottom: 10px;
+        font-size: 1.4rem;
       }
       @media only screen and (max-width: 867px) {
         html {
@@ -157,28 +167,25 @@
         </svg>
       </div>
       <div class="headline">Club Agnostic</div>
-      <!-- <p>Old - The first frame stayed for 1.40 seconds.</p>
+      <p>No changes to these two options:</p>
       <div class="link">
-        <a target="_blank" href="./Old/300x250/index.html"
-          >300x250 <small>7 sec</small></a
+        <a target="_blank" href="./option_1/300x250/index.html"
+          >300x250 <small>6sec</small></a
         >
-        <a target="_blank" href="./Old/300x250-alt/index.html"
-          >300x250 <small>5 sec</small></a
+        <a target="_blank" href="./option_1/300x250-alt1/index.html"
+          >300x250 <small>5sec</small></a
         >
-        <a target="_blank" href="./Old/300x250-alt1/index.html"
-          >300x250 <small>3.5 sec</small></a
-        >
-      </div> -->
-      <!-- <p>New - The first frame stayed for 2.80 seconds.</p> -->
+      </div>
+      <p>
+        <strong>Option 1</strong> has the logo at the bottom. &
+        <strong>Option 2</strong> has the animation inverted.
+      </p>
       <div class="link">
-        <!-- <a target="_blank" href="./New/300x250/index.html"
-          >300x250 <small>8 sec</small></a
-        > -->
-        <a target="_blank" href="./New/300x250-alt/index.html"
-          >300x250 <small>6 sec</small></a
+        <a target="_blank" href="./option_2/300x250/index.html"
+          >300x250 <small class="op">Option 1 — 6sec</small></a
         >
-        <a target="_blank" href="./New/300x250-alt1/index.html"
-          >300x250 <small>5 sec</small></a
+        <a target="_blank" href="./option_2/300x250-alt/index.html"
+          >300x250 <small class="op">Option 2 — 6sec</small></a
         >
       </div>
     </div>
