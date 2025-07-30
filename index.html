@@ -10,9 +10,13 @@
         margin: 0px;
         padding: 0px;
       }
+      html {
+        font-size: 62.5%;
+      }
       body {
         font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        background-color: #000;
       }
       .content {
         position: absolute;
@@ -34,7 +38,7 @@
         text-transform: uppercase;
         font-weight: bold;
         padding-top: 50px;
-        font-size: 100px;
+        font-size: 10rem;
         margin-bottom: 50px;
         text-shadow: #3b1e01 -5px 5px 0px;
       }
@@ -44,6 +48,7 @@
         display: flex;
         gap: 20px;
         justify-content: center;
+        flex-wrap: wrap;
       }
       .link a {
         background-color: #f4cb84;
@@ -52,7 +57,7 @@
         padding: 12px 30px;
         color: #000;
         border-radius: 8px;
-        font-size: 25px;
+        font-size: 2.5rem;
         position: relative;
         transition: all 0.3s ease;
         z-index: 0;
@@ -91,6 +96,17 @@
         text-align: center;
         color: #fff;
         margin-bottom: 10px;
+      }
+      @media only screen and (max-width: 867px) {
+        html {
+          font-size: 35%;
+        }
+        video {
+          display: none;
+        }
+        .content {
+          position: inherit;
+        }
       }
     </style>
   </head>
