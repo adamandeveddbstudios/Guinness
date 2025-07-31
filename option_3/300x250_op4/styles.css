@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'ZinDisplay';
+  src: url('fonts/subset-ZinDisplay-Demo.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.absolute {
+  position:absolute;
+  height: auto;
+}
+
+sup, sub {
+  font-size: 50%;
+}
+
+html, body {
+  width:300px;
+  height:250px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#main,
+#background {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:300px;
+  height:250px;
+  background-color: #e9e9e9;
+  border: solid 1px #000000;
+}
+#main {
+  overflow:hidden;
+}
+.full-width {
+  position:absolute;
+  left: 0px;
+  top: 0px;
+  width: 300px;
+  height: auto;
+}
+.bg{
+    width: 538px;
+    position: absolute;
+    transform: translate3d(-191px, 0, 0);
+    will-change: transform;
+}
+.lastLine{
+  position: absolute;
+  width: 147px;
+  left: 91px;
+  top: 155px;
+}
+.copy{
+  font-family: 'ZinDisplay';
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  left: 50px;
+  top: 86px;
+}
+.img{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.copy1{
+  font-family: 'ZinDisplay';
+  color: #fff;
+  font-size: 8.1px;
+  position: absolute;
+  left: 18px;
+  top: 227px;
+}
+/* #hand{
+  left: -105px;
+  top: 18px;
+} */
+.combineLogo{
+  position: absolute;
+  width: 63px;
+  top: 204px;
+  left: 222px;
+}
+.logo{
+  width: 115px;
+  position: absolute;
+  left: 149px;
+  top: 90px;
+}
+#default_exit{
+  top:0px;
+  left:0px;
+  width: 300px;
+  height: 250px;
+}
+
+.btn{
+  position: absolute;
+  top:0px;
+  left:0px;
+  cursor: pointer;
+  background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+  z-index: 200;
+}
+
+:focus{outline: 0}
+
+::-moz-focus-inner{border: 0}
