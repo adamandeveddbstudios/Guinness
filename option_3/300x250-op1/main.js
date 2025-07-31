@@ -26,7 +26,7 @@ function animate() {
     { autoAlpha: 0, ease: Power1.easeInOut },
     "+=2.5"
   );
-  tl.to(".combineLogo", 0.5, { autoAlpha: 1, ease: Power1.easeInOut }, "<");
+  // tl.to(".combineLogo", 0.5, { autoAlpha: 1, ease: Power1.easeInOut }, "<");
   tl.to("#bg", {
     duration: 1,
     x: -34,
