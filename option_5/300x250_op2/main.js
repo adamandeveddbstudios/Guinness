@@ -20,7 +20,7 @@ function init() {
 function animate() {
   tl.set("#main", { autoAlpha: 1, force3D: true });
 
-  tl.to(".pick", 0.2, { autoAlpha: 1, stagger: 0.20, repeat: -1 }, 0);
+  tl.to(".pick", 0.2, { autoAlpha: 1, stagger: 0.20, repeat: -1, yoyo:true, ease: Power1.easeInOut }, 0);
 }
 
   // tl.to("#bg", 2, { x: -45, y: -61, ease: "power1.inOut",},);
