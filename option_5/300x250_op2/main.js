@@ -1,59 +1,12 @@
+gsap.registerPlugin(SplitText);
 
+// Banner duration timer start time
 var startTime;
+
+// Timeline reference
 var tl;
 
-
-var pause = false;
-var bg = document.getElementsByClassName("bg");
-console.log(bg)
-
-
-var randomX = random(5, 3);
-var randomY = random(-5, -7);
-var randomDelay = random(0, 1);
-var randomTime = random(2, 3);
-var randomTime2 = random(2, 3);
-var randomAngle = random(2, 3);
-
-function rotate(target, direction) {
-  
-  TweenLite.to(target, randomTime2(), {
-    rotation: randomAngle(direction),
-    // delay: randomDelay(),
-    ease: Sine.easeInOut,
-    onComplete: pause ? null : rotate,
-    onCompleteParams: [target, direction * -1]
-  });
-}
-
-function moveX(target, direction) {
-  
-  TweenLite.to(target, randomTime(), {
-    x: randomX(direction),
-    ease: Sine.easeInOut,
-    onComplete: pause ? null : moveX,
-    onCompleteParams: [target, direction * -1]
-  });
-}
-
-function moveY(target, direction) {  
-  TweenLite.to(target, randomTime(), {
-    y: randomY(direction),
-    ease: Sine.easeInOut,
-    onComplete: pause ? null : moveY,
-    onCompleteParams: [target, direction * -1]
-  });
-}
-
-
-function random(min, max) {
-  var delta = max - min;
-  return (direction = 2) => (min + delta * Math.random()) * direction;
-}
-
-
-
-
+// Init tricggered by onLoad in Body tag
 function init() {
   // Set Banner duration timer
   startTime = new Date();
@@ -66,12 +19,8 @@ function init() {
 
 function animate() {
   tl.set("#main", { autoAlpha: 1, force3D: true });
-  tl.set(".bg",{ease: Power2.easeInOut})
 
-  moveY(bg, -1);
-  moveX(bg, 2);
-  rotate(bg, 1);
-
+  tl.to(".pick", 0.2, { autoAlpha: 1, stagger: 0.20, repeat: -1 }, 0);
 }
 
   // tl.to("#bg", 2, { x: -45, y: -61, ease: "power1.inOut",},);

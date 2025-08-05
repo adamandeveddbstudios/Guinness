@@ -50,15 +50,10 @@ html, body {
   height: auto;
 }
 .bg{
-    /* width: 538px; */
+    width: 538px;
     position: absolute;
-    /* transform: translate3d(-181px, -39px, 0); */
+    transform: translate3d(-181px, -39px, 0);
     will-change: transform;
-
-
-    width: 458px;
-    left: -40px;
-    top: -50px;
 }
 .lastLine{
   position: absolute;
@@ -89,10 +84,16 @@ html, body {
   left: 209px;
 }
 .logo{
-  width: 106px;
+  width: 126px;
   position: absolute;
-  left: 17px;
-  top: 17px;
+  left: 158px;
+  top: 72px;
+}
+.pick{
+  width: 443px;
+  left: -46px;
+  top: 0px;
+  position: absolute;
 }
 #default_exit{
   top:0px;
