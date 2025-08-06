@@ -20,29 +20,12 @@ function init() {
 function animate() {
   tl.set("#main", { autoAlpha: 1, force3D: true });
   tl.set("#bg", { transformPerspective: 1000, force3D: true });
-  tl.to([".lastLine, .logo"],0.5,{ autoAlpha: 0, ease: Power1.easeInOut },"+=2.5");
-  tl.to("#bg", 2, { x: -45, y: -61, ease: "power1.inOut",},);
-
-
-  // tl.to("#bg", {
-  //   duration: 2,
-  //   x: -135,
-  //   y: -25,
-  //   ease: "power1.inOut"
-  // })
-  // .to("#bg", {
-  //   duration: 2,
-  //   x: -45,
-  //   y: -61,
-  //   ease: "power1.inOut"
-  // }, "-=0.5");
-  
-
-  tl.to(".copy", 0.5, { autoAlpha: 1, ease: Power1.easeInOut }, "-=0.5");
-  tl.to("#bg", {y: "-=3", duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: 1,});
+  // tl.to([".lastLine, .logo"],0.5,{ autoAlpha: 0, ease: Power1.easeInOut },"+=2.5");
+  // tl.to("#bg", 2, { x: -45, y: -61, ease: "power1.inOut",},);
+  // tl.to(".copy", 0.5, { autoAlpha: 1, ease: Power1.easeInOut }, "-=0.5");
+  // tl.to("#bg", {y: "-=3", duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: 1,});
 }
 
-  // tl.to("#bg", 2, { x: -45, y: -61, ease: "power1.inOut",},);
 
 
 function randomInt(min, max) {
