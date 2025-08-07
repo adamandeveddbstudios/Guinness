@@ -28,11 +28,8 @@
     tl.set("#main", { autoAlpha: 1 });
     tl.set("#main2", { autoAlpha: 0 });
     tl.set("#bg-small", { transformPerspective: 1000, force3D: true });
-
     tl.to([".tag-small", ".logo-small"], 0.5, {autoAlpha: 0, ease: Power1.easeInOut}, "+=2.5");
-
-    tl.to("#bg-small", 1, { x: 326, y: -17, scale: 1.5, ease: "power1.inOut" });
-
+    tl.to("#bg-small", 1, { x: 390, y: -18, scale: 1.6, ease: "power1.inOut" });
     tl.to(".copy", 0.5, {autoAlpha: 1, ease: Power1.easeInOut}, "-=0.5");
   }
 
@@ -45,11 +42,8 @@
 
     tl1.set("#main", { autoAlpha: 0 });
     tl1.set("#main2", { autoAlpha: 1 });
-
     tl1.to([".tag-big", ".logo-big"], 0.5, { autoAlpha: 0, ease: Power1.easeInOut }, "+=2.5");
-
-    tl1.to("#bg-big", 2, {x: 303, y: -20, scale: 1.95, ease: "power1.inOut" });
-
+    tl1.to("#bg-big", 1, {x: 274, y: -19, scale: 1.47, ease: "power1.inOut" });
     tl1.to(".copy-big", 0.5, {autoAlpha: 1, ease: Power1.easeInOut}, "-=0.5");
   }
 

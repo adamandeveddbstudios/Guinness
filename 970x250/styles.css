@@ -54,7 +54,7 @@ html, body {
   will-change: transform;
   position: absolute;
   /* width: 1756px; */
-  transform: perspective(1000px) translate3d(-885.5px, -155.5px, 0px) scale(0.5, 0.5);
+  transform: perspective(1000px) translate3d(-905.5px, -164.5px, 0px) scale(0.69, 0.69);
 
 }
 /* .lastLine{
@@ -66,11 +66,11 @@ html, body {
 .copy{
   font-family: 'ZinDisplay';
   color: #fff;
-  font-size: 51px;
-  line-height: 33.2px;
+  font-size: 56px;
+  line-height: 35.2px;
   position: absolute;
-  left: 195px;
-  top: 102px;
+  left: 165px;
+  top: 108px;
   text-align: right;
 }
 .combineLogo{

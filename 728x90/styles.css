@@ -59,8 +59,8 @@ html, body {
 .lastLine{
   position: absolute;
   width: 168px;
-  left: 384px;
-  top: 35.6px;
+  left: 364px;
+  top: 31.6px;
 }
 .copy{
   font-family: 'ZinDisplay';
@@ -69,7 +69,7 @@ html, body {
   line-height: 33.2px;
   position: absolute;
   left: 159px;
-  top: 26px;
+  top: 25px;
 }
 .combineLogo{
   position: absolute;
@@ -80,8 +80,8 @@ html, body {
 .logo{
   width: 111.5px;
   position: absolute;
-  left: 140px;
-  top: 19px;
+  left: 107px;
+  top: 22px;
 }
 #default_exit{
   top:0px;

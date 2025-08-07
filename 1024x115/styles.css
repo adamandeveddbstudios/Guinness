@@ -51,31 +51,30 @@ html, body {
 .bg-small {
   position: absolute;
   will-change: transform;
-  width: 1240px;
-  left: -200px;
-  top: -42px;
+  width: 1180px;
+  left: -66px;
+  top: -60px;
 }
 .bg-big {
   position: absolute;
-  width: 1024px;
-  height: 308px;
-  top: 25px;
-  left: -56px;
+  width: 1344px;
+  top: -14px;
+  left: -173px;
   scale: 1.52;
   will-change: transform;
 }
 
 .tag-small {
   position: absolute;
-  left: 439px;
-  top: 40px;
+  left: 428px;
+  top: 42px;
   width: 207px;
 }
 .tag-big {
   position: absolute;
-  left: 540px;
-  top: 127px;
-  width: 310px;
+  left: 497px;
+  top: 149px;
+  width: 290px;
 }
 .logo-small {
   position: absolute;
@@ -85,9 +84,9 @@ html, body {
 }
 .logo-big {
   position: absolute;
-  left: 110px;
-  top: 57px;
-  width: 140px;
+  left: 125px;
+  top: 56px;
+  width: 143px;
 }
 .tag-logo,
 .tag-logo-big {
@@ -108,9 +107,9 @@ html, body {
 }
 .copy-big {
   position: absolute;
-  left: 129px;
+  left: 87px;
   top: 139px;
-  font-size: 60.7px;
+  font-size: 66.7px;
   line-height: 31.2px;
   color: #fff;
   text-align: right;

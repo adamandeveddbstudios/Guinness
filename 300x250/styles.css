@@ -52,14 +52,14 @@ html, body {
 .bg{
     width: 538px;
     position: absolute;
-    transform: translate3d(-181px, -39px, 0);
+    transform: translate3d(-177px, -26px, 0);
     will-change: transform;
 }
 .lastLine{
   position: absolute;
-  width: 176px;
-  left: 79px;
-  top: 140px;
+  width: 155px;
+  left: 84px;
+  top: 154px;
 }
 .copy{
   font-family: 'ZinDisplay';
@@ -84,10 +84,10 @@ html, body {
   left: 209px;
 }
 .logo{
-  width: 126px;
+  width: 105px;
   position: absolute;
-  left: 158px;
-  top: 72px;
+  left: 157px;
+  top: 101px;
 }
 #default_exit{
   top:0px;

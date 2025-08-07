@@ -50,16 +50,17 @@ html, body {
   height: auto;
 }
 .bg{
-    width: 320px;
+    width: 429px;
     position: absolute;
-    /* transform: translate3d(-181px, -39px, 0); */
+    transform: translate3d(-65px, -19px, 0);
     will-change: transform;
 }
 .lastLine{
   position: absolute;
-  width: 109px;
-  left: 145px;
-  top: 17.3px;
+  width: 100px;
+  left: 159px;
+  top: 16.3px;
+
 }
 .copy{
   font-family: 'ZinDisplay';
@@ -70,9 +71,9 @@ html, body {
   top: 12px;
 }
 .logo{
-  width: 58px;
+  width: 63.5px;
   position: absolute;
-  left: 12px;
+  left: 11px;
   top: 12px;
 }
 #default_exit{
