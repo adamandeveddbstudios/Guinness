@@ -21,7 +21,7 @@ function animate() {
   tl.set("#main", { autoAlpha: 1, force3D: true });
   tl.set("#bg", { transformPerspective: 1000, force3D: true });
   tl.to([".lastLine, .logo"],0.5,{ autoAlpha: 0, ease: Power1.easeInOut },"+=2.5");
-  tl.to("#bg", 1, {x: -636, y:-184, scale:0.580, ease: "power1.inOut",},);
+  tl.to("#bg", 1, {x: -638, y:-184, scale:0.63, ease: "power1.inOut",},);
   tl.to(".copy", 0.5, { autoAlpha: 1, ease: Power1.easeInOut }, "-=0.5");
 }
 

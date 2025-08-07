@@ -54,7 +54,7 @@ html, body {
   will-change: transform;
   position: absolute;
   /* width: 1756px; */
-  transform: perspective(1000px) translate3d(-905.5px, -164.5px, 0px) scale(0.69, 0.69);
+  transform: perspective(1000px) translate3d(-905.5px, -155.5px, 0px) scale(0.69, 0.69);
 
 }
 /* .lastLine{
@@ -82,8 +82,8 @@ html, body {
 .logo{
   width: 144px;
   position: absolute;
-  left: 151px;
-  top: 27px;
+  left: 121px;
+  top: 37px;
 }
 #default_exit{
   top:0px;

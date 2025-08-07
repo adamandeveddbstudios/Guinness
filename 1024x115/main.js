@@ -43,7 +43,7 @@
     tl1.set("#main", { autoAlpha: 0 });
     tl1.set("#main2", { autoAlpha: 1 });
     tl1.to([".tag-big", ".logo-big"], 0.5, { autoAlpha: 0, ease: Power1.easeInOut }, "+=2.5");
-    tl1.to("#bg-big", 1, {x: 274, y: -19, scale: 1.47, ease: "power1.inOut" });
+    tl1.to("#bg-big", 1, {x: 274, y: -26, scale: 1.47, ease: "power1.inOut" });
     tl1.to(".copy-big", 0.5, {autoAlpha: 1, ease: Power1.easeInOut}, "-=0.5");
   }
 

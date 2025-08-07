@@ -58,7 +58,7 @@ html, body {
 .bg-big {
   position: absolute;
   width: 1344px;
-  top: -14px;
+  top: -3px;
   left: -173px;
   scale: 1.52;
   will-change: transform;
@@ -72,8 +72,8 @@ html, body {
 }
 .tag-big {
   position: absolute;
-  left: 497px;
-  top: 149px;
+  left: 503px;
+  top: 161px;
   width: 290px;
 }
 .logo-small {
@@ -84,8 +84,8 @@ html, body {
 }
 .logo-big {
   position: absolute;
-  left: 125px;
-  top: 56px;
+  left: 78px;
+  top: 65px;
   width: 143px;
 }
 .tag-logo,
