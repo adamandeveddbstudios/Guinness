@@ -21,7 +21,12 @@ function animate() {
   tl.set("#main", { autoAlpha: 1, force3D: true });
   tl.set("#bg", { transformPerspective: 1000, force3D: true });
   tl.to([".lastLine, .logo"],0.5,{ autoAlpha: 0, ease: Power1.easeInOut },"+=2.5");
-  tl.to("#bg", 2, { x: -361, y: -161, width:'1989px', ease: "power1.inOut",},);
+  // tl.to("#bg", 2, { x: -361, y: -161, width:'1989px', ease: "power1.inOut",},);
+
+
+  tl.to("#bg", 2, {x: -650, y:-190, scale:0.580, ease: "power1.inOut",},);
+
+
   tl.to(".copy", 0.5, { autoAlpha: 1, ease: Power1.easeInOut }, "-=0.5");
   tl.to("#bg", {y: "-=3", duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: 1,});
 }

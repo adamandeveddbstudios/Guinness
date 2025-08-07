@@ -50,10 +50,12 @@ html, body {
   height: auto;
 }
 .bg{
-  transform: translate3d(-487px, -92px, 0);
+  /* transform: translate3d(-487px, -92px, 0); */
   will-change: transform;
   position: absolute;
-  width: 1756px;
+  /* width: 1756px; */
+  transform: perspective(1000px) translate3d(-885.5px, -155.5px, 0px) scale(0.5, 0.5);
+
 }
 /* .lastLine{
   position: absolute;

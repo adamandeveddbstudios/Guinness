@@ -51,9 +51,10 @@ html, body {
 }
 .bg{
   position: absolute;
-  transform: translate3d(-341px, -78px, 0);
+  /* transform: translate3d(-341px, -78px, 0); */
   will-change: transform;
-  width: 1298px;
+  /* width: 1298px; */
+  width: 728px;
 }
 .lastLine{
   position: absolute;
