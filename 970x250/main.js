@@ -28,7 +28,7 @@ function animate() {
 
 
   tl.to(".copy", 0.5, { autoAlpha: 1, ease: Power1.easeInOut }, "-=0.5");
-  tl.to("#bg", {y: "-=3", duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: 1,});
+  // tl.to("#bg", {y: "-=3", duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: 1,});
 }
 
 

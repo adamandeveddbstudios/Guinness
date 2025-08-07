@@ -4,8 +4,18 @@
   font-style: normal;
   font-display: swap;
 }
+
 * {
   box-sizing: border-box;
+}
+html, body {
+  width: 1024px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'ZinDisplay';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .hidden {
@@ -13,94 +23,123 @@
   visibility: hidden;
 }
 
-.absolute {
-  position:absolute;
-  height: auto;
-}
-
-sup, sub {
-  font-size: 50%;
-}
-
-html, body {
-  width:970px;
-  height:250px;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 #main,
-#background {
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:970px;
-  height:250px;
+#main2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1024px;
+  overflow: hidden;
   background-color: #e9e9e9;
-  border: solid 1px #000000;
+  border: 1px solid #000;
 }
 #main {
-  overflow:hidden;
+  height: 115px;
 }
+#main2 {
+  height: 308px;
+}
+
 .full-width {
-  position:absolute;
-  left: 0px;
-  top: 0px;
-  width:970px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1024px;
   height: auto;
 }
-.bg{
-  /* transform: translate3d(-487px, -92px, 0); */
-  will-change: transform;
-  position: absolute;
-  /* width: 1756px; */
-  transform: perspective(1000px) translate3d(-885.5px, -155.5px, 0px) scale(0.5, 0.5);
 
+.bg-small {
+  position: absolute;
+  width: 1024px;
+  will-change: transform;
 }
-/* .lastLine{
+.bg-big {
   position: absolute;
-  width: 146px;
-  left: 52px;
-  top: 149px;
-} */
-.copy{
-  font-family: 'ZinDisplay';
+  width: 1024px;
+  height: 308px;
+  top: 25px;
+  left: -56px;
+  scale: 1.52;
+  will-change: transform;
+}
+
+.tag-small {
+  position: absolute;
+  left: 439px;
+  top: 40px;
+  width: 207px;
+}
+.tag-big {
+  position: absolute;
+  left: 540px;
+  top: 127px;
+  width: 310px;
+}
+.logo-small {
+  position: absolute;
+  left: 116px;
+  top: 28px;
+  width: 141px;
+}
+.logo-big {
+  position: absolute;
+  left: 110px;
+  top: 57px;
+  width: 140px;
+}
+.tag-logo,
+.tag-logo-big {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1024px;
+}
+
+.copy {
+  position: absolute;
+  left: 249px;
+  top: 37px;
+  font-size: 38.5px;
+  line-height: 31.2px;
   color: #fff;
-  font-size: 51px;
-  line-height: 33.2px;
-  position: absolute;
-  left: 195px;
-  top: 102px;
   text-align: right;
 }
-.combineLogo{
+.copy-big {
   position: absolute;
-  width: 75px;
-  top: 196px;
-  left: 209px;
-}
-.logo{
-  width: 144px;
-  position: absolute;
-  left: 151px;
-  top: 27px;
-}
-#default_exit{
-  top:0px;
-  left:0px;
-  width:970px;
-  height: 250px;
+  left: 129px;
+  top: 139px;
+  font-size: 60.7px;
+  line-height: 31.2px;
+  color: #fff;
+  text-align: right;
 }
 
-.btn{
+/* Click areas */
+#default_exit_small {
   position: absolute;
-  top:0px;
-  left:0px;
-  cursor: pointer;
-  background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+  top: 0;
+  left: 0;
+  width: 1024px;
+  height: 115px;
+  z-index: 200;
+}
+#default_exit_big {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1024px;
+  height: 308px;
   z-index: 200;
 }
 
-:focus{outline: 0}
+.btn {
+  cursor: pointer;
+  background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+}
 
-::-moz-focus-inner{border: 0}
+:focus {
+  outline: none;
+}
+::-moz-focus-inner {
+  border: 0;
+}

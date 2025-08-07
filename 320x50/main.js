@@ -23,7 +23,7 @@ function animate() {
   tl.to([".lastLine, .logo"],0.5,{ autoAlpha: 0, ease: Power1.easeInOut },"+=2.5");
   tl.to("#bg", 2, {x: 180, y:-15, scale:2.13, ease: "power1.inOut",},);
   tl.to(".copy", 0.5, { autoAlpha: 1, ease: Power1.easeInOut }, "-=0.5");
-  tl.to("#bg", {y: "-=3", duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: 1,});
+  // tl.to("#bg", {y: "-=3", duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: 1,});
 }
 
 

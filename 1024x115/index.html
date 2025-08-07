@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="ad.size" content="width=970,height=90" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script type="text/javascript">
+    <meta name="ad.size" content="width=1024,height=115" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
       var clickTag = "https://www.guinness.com/en";
     </script>
   </head>
   <body onload="init();">
-    <div id="main">
-      <!-- <img
-        src="images/f3.png"
-        class="full-width"
-        style="position: absolute; z-index: 1111; opacity: 0.5"
-        alt=""
-      /> -->
-      <img src="images/bg.jpg" class="bg" id="bg" alt="" />
-      <img src="images/tahline.png" class="full-width lastLine" alt="" />
-      <img src="images/logo.svg" class="logo" alt="" />
+    <div id="banner">
+      <div id="main">
+      <img src="images/bg-small.jpg" class="bg-small" id="bg-small" alt="" />
+      <img src="images/tagline.svg" class="full-width tag-small" alt="" />
+      <img src="images/logo-small.svg" class="logo-small" alt="" />
       <div class="copy hidden">Lovely day for a</div>
-       <img src="images/tag_logo.png" class="full-width" alt="" />
-      <div id="default_exit" class="btn"></div>
+      <img src="images/tag_logo.png" class="tag-logo" alt="" />
+      <div id="default_exit_small" class="btn"></div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <div id="main2" class="hidden">
+      <img src="images/bg-big.jpg" class="bg-big" id="bg-big" alt="" />
+      <img src="images/tagline.svg" class="tag-big" alt="" />
+      <img src="images/logo-big.svg" class="logo-big" alt="" />
+      <div class="copy-big hidden">Lovely day for a</div>
+      <img src="images/tag_logo-big.png" class="tag-logo-big" alt="" />
+      <div id="default_exit_big" class="btn"></div>
+    </div>
+    </div>
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="main.js"></script>
+
     <script>
-      var clickArea = document.getElementById("default_exit");
-      clickArea.onclick = function () {
+      // Click handling for both versions
+      document.getElementById("default_exit_small").onclick = function () {
+        window.open(clickTag, "_blank");
+      };
+      document.getElementById("default_exit_big").onclick = function () {
         window.open(clickTag, "_blank");
       };
     </script>

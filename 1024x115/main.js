@@ -1,70 +1,74 @@
-gsap.registerPlugin(SplitText);
-
-// Banner duration timer start time
+// Banner duration timer
 var startTime;
 
-// Timeline reference
+// GSAP Timeline
 var tl;
 
-// Init tricggered by onLoad in Body tag
+// Track current banner state
+var isExpanded = false;
+
+// Init onload
 function init() {
-  // Set Banner duration timer
   startTime = new Date();
-
-  // Set Global Timeline
   tl = new TimelineMax({ onComplete: endTime });
+
   setRollover();
-  animate();
+  animateCollapsed(); // Start in collapsed state
 }
 
-function animate() {
-  tl.set("#main", { autoAlpha: 1, force3D: true });
-  tl.set("#bg", { transformPerspective: 1000, force3D: true });
-  tl.to([".lastLine, .logo"],0.5,{ autoAlpha: 0, ease: Power1.easeInOut },"+=2.5");
-  // tl.to("#bg", 2, { x: -361, y: -161, width:'1989px', ease: "power1.inOut",},);
+// Collapsed animation
+function animateCollapsed() {
+  if (!isExpanded) return; // Already collapsed
 
+  isExpanded = false;
+  tl.clear();
 
-  tl.to("#bg", 2, {x: -650, y:-190, scale:0.580, ease: "power1.inOut",},);
+  tl.set("#main", { autoAlpha: 1 });
+  tl.set("#main2", { autoAlpha: 0 });
+  tl.set("#bg-small", { transformPerspective: 1000, force3D: true });
 
-
+  tl.to([".tag-small", ".logo-small"], 0.5, { autoAlpha: 0, ease: Power1.easeInOut }, "+=2.5");
+  tl.to("#bg-small", 2, { x: 515, y: -51, scale: 2.18, ease: "power1.inOut" });
   tl.to(".copy", 0.5, { autoAlpha: 1, ease: Power1.easeInOut }, "-=0.5");
-  tl.to("#bg", {y: "-=3", duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: 1,});
 }
 
+// Expanded animation
+function animateExpanded() {
+  if (isExpanded) return; // Already expanded
 
-function randomInt(min, max) {
-  // min and max included
-  return Math.floor(Math.random() * (max - min + 1) + min);
+  isExpanded = true;
+  tl.clear();
+
+  tl.set("#main", { autoAlpha: 0 });
+  tl.set("#main2", { autoAlpha: 1 });
+  // tl.set("#bg-big", { transformPerspective: 1000, force3D: true });
+
+  tl.to([".tag-big", ".logo-big"], 0.5, { autoAlpha: 0, ease: Power1.easeInOut }, "+=2.5");
+  tl.to("#bg-big", 2, { x: 303, y: -20, scale: 1.95, ease: "power1.inOut" });
+  tl.to(".copy-big", 0.5, { autoAlpha: 1, ease: Power1.easeInOut }, "-=0.5");
 }
 
-function endTime() {
-  // show total banner animation time in browser console.
-  var endTime = new Date();
-
-  console.log(
-    "Animation duration: " + (endTime - startTime) / 1000 + " seconds"
-  );
-}
-
-// CTA grow on hover
-
-function setRollover() {
-  document
-    .getElementById("default_exit")
-    .addEventListener("mouseover", default_over, false);
-  document
-    .getElementById("default_exit")
-    .addEventListener("mouseout", default_out, false);
-}
-
+// Expand on hover
 function default_over() {
-  TweenMax.to("#cta", 0.3, {
-    scale: 1.1,
-    transformOrigin: "100% 73%",
-    ease: Power2.easeOutIn,
-  });
+  animateExpanded();
 }
 
+// Collapse on mouse out
 function default_out() {
-  TweenMax.to("#cta", 0.3, { scale: 1, ease: Power1.easeInOut });
+  animateCollapsed();
+}
+
+// Set rollover listeners
+function setRollover() {
+  var exit = document.getElementById("banner");
+  if (exit) {
+    exit.addEventListener("mouseover", default_over);
+    exit.addEventListener("mouseout", default_out);
+  }
+}
+
+// Animation duration log
+function endTime() {
+  var endTime = new Date();
+  console.log("Animation duration: " + (endTime - startTime) / 1000 + " seconds");
 }
