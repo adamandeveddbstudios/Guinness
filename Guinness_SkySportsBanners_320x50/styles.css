@@ -51,15 +51,19 @@ html, body {
 }
 .bg{
     width: 429px;
-    position: absolute;
-    transform: translate3d(-65px, -19px, 0);
-    will-change: transform;
+  position: absolute;
 
-    display: block;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    left: 0px;
-    top: 0px;
+  transform: translate(-65px, -19px); 
+
+  transform-origin: 50% 50%;          
+  will-change: transform;            
+
+  display: block;
+  backface-visibility: hidden;
+  transform-style: flat;             
+
+  -webkit-font-smoothing: antialiased;
+  image-rendering: auto;   
 }
 .lastLine{
   position: absolute;
