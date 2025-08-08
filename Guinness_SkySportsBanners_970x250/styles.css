@@ -66,11 +66,11 @@ html, body {
 .copy{
   font-family: 'ZinDisplay';
   color: #fff;
-  font-size: 56px;
+  font-size: 54px;
   line-height: 35.2px;
   position: absolute;
-  left: 165px;
-  top: 108px;
+  left: 182px;
+  top: 111px;
   text-align: right;
 }
 .combineLogo{

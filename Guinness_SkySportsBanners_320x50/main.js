@@ -26,7 +26,7 @@ function animate() {
   tl.to([".lastLine, .logo"],0.5,{ autoAlpha: 0, ease: Power1.easeInOut },"+=2.5");
   tl.to("#bg", 1, {
     x: 73,
-    y: -7,
+    y: -8,
     scale: 1.44,
     ease: "power1.inOut",
     force3D: true

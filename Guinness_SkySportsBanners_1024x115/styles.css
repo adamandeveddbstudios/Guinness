@@ -98,17 +98,17 @@ html, body {
 
 .copy {
   position: absolute;
-  left: 249px;
-  top: 37px;
-  font-size: 38.5px;
+  left: 249.5px;
+  top: 38px;
+  font-size: 39px;
   line-height: 31.2px;
   color: #fff;
   text-align: right;
 }
 .copy-big {
   position: absolute;
-  left: 87px;
-  top: 139px;
+  left: 91px;
+  top: 139.5px;
   font-size: 66.7px;
   line-height: 31.2px;
   color: #fff;
