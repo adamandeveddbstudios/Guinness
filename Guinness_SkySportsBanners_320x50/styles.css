@@ -50,21 +50,18 @@ html, body {
   height: auto;
 }
 .bg{
-    width: 429px;
+   width: 429px;
   position: absolute;
+  left: 0;
+  top: 0;
 
-  transform: translate(-65px, -19px); 
-
-  transform-origin: 50% 50%;          
-  will-change: transform;            
+  transform-origin: 0px 0px; /* anchor scale to top-left */
+  will-change: transform;
 
   display: block;
   backface-visibility: hidden;
-  transform-style: flat;             
-
-
-  -webkit-font-smoothing: antialiased; 
   -webkit-backface-visibility: hidden;
+  transform-style: flat;
  
 }
 .lastLine{
