@@ -1,80 +1,79 @@
-// Banner duration timer
-  var startTime;
+var startTime;
+var tl;
+var tl1;
+var isExpanded = false;
 
-  // GSAP Timelines
-  var tl;
-  var tl1;
+function init() {
+  startTime = new Date();
 
-  // Track current banner state
-  var isExpanded = false;
+  setRollover();
+  animateCollapsed(); // Start with collapsed animation
+}
 
-  // Init onload
-  function init() {
-    startTime = new Date();
-    tl = new TimelineMax({ onComplete: endTime });
-    tl1 = new TimelineMax({ onComplete: endTime });
+function animateCollapsed() {
+  isExpanded = false;
 
-    setRollover();
-    animateCollapsed(); // Start in collapsed state with animation
+  // Kill and clear the expanded timeline safely
+  if (tl1) {
+    tl1.kill();
+    tl1 = null;
   }
 
-  // Collapsed animation
-  function animateCollapsed() {
-    isExpanded = false;
+  // Clear and rebuild collapsed timeline
+  tl = gsap.timeline({ onComplete: endTime });
 
-    tl1.kill(); // Kill expanded timeline if running
-    tl.clear();
+  gsap.set("#main", { autoAlpha: 1 });
+  gsap.set("#main2", { autoAlpha: 0 });
+  gsap.set("#bg-small", { transformPerspective: 1000, force3D: true });
 
-    tl.set("#main", { autoAlpha: 1 });
-    tl.set("#main2", { autoAlpha: 0 });
-    tl.set("#bg-small", { transformPerspective: 1000, force3D: true });
-    tl.to([".tag-small", ".logo-small"], 0.5, {autoAlpha: 0, ease: Power1.easeInOut}, "+=2.5");
+   tl.to([".tag-small", ".logo-small"], 0.5, {autoAlpha: 0, ease: Power1.easeInOut}, "+=2.5");
     tl.to("#bg-small", 1, { x: 390, y: -18, scale: 1.6, ease: "power1.inOut" });
     tl.to(".copy", 0.5, {autoAlpha: 1, ease: Power1.easeInOut}, "-=0.5");
+}
+
+function animateExpanded() {
+  isExpanded = true;
+
+  // Kill and clear the collapsed timeline safely
+  if (tl) {
+    tl.kill();
+    tl = null;
   }
 
-  // Expanded animation
-  function animateExpanded() {
-    isExpanded = true;
+  // Clear and rebuild expanded timeline
+  tl1 = gsap.timeline({ onComplete: endTime });
 
-    tl.kill(); // Kill collapsed timeline if running
-    tl1.clear();
+  gsap.set("#main", { autoAlpha: 0 });
+  gsap.set("#main2", { autoAlpha: 1 });
 
-    tl1.set("#main", { autoAlpha: 0 });
-    tl1.set("#main2", { autoAlpha: 1 });
-    tl1.to([".tag-big", ".logo-big"], 0.5, { autoAlpha: 0, ease: Power1.easeInOut }, "+=2.5");
-    tl1.to("#bg-big", 1, {x: 274, y: -26, scale: 1.47, ease: "power1.inOut" });
-    tl1.to(".copy-big", 0.5, {autoAlpha: 1, ease: Power1.easeInOut}, "-=0.5");
+  tl1.to([".tag-big", ".logo-big"], 0.5, { autoAlpha: 0, ease: Power1.easeInOut }, "+=2.5");
+  tl1.to("#bg-big", 1, {x: 411, y: -38, scale: 2.2, ease: "power1.inOut" });
+  tl1.to(".copy-big", 0.5, {autoAlpha: 1, ease: Power1.easeInOut}, "-=0.5");
+}
+
+function default_over() {
+  if (!isExpanded) {
+    animateExpanded();
   }
+}
 
-  // Expand on hover
-  function default_over() {
-    if (!isExpanded) {
-      animateExpanded();
-    }
+function default_out() {
+  if (isExpanded) {
+    animateCollapsed();
   }
+}
 
-  // Collapse on mouse out
-  function default_out() {
-    if (isExpanded) {
-      animateCollapsed();
-    }
+function setRollover() {
+  var banner = document.getElementById("banner");
+  if (banner) {
+    banner.addEventListener("mouseenter", default_over);
+    banner.addEventListener("mouseleave", default_out);
   }
+}
 
-  // Set rollover listeners
-  function setRollover() {
-    var exit = document.getElementById("banner");
-    if (exit) {
-      exit.addEventListener("mouseover", default_over);
-      exit.addEventListener("mouseout", default_out);
-    }
-  }
+function endTime() {
+  var end = new Date();
+  console.log("Duration: " + (end - startTime) / 1000 + "s");
+}
 
-  // Animation duration log
-  function endTime() {
-    var endTime = new Date();
-    console.log("Animation duration: " + (endTime - startTime) / 1000 + " seconds");
-  }
-
-  // Start when window is ready
-  window.onload = init;
+window.onload = init;
