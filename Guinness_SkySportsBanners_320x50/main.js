@@ -18,8 +18,15 @@ function init() {
 
 function animate() {
   tl.set("#main", { autoAlpha: 1 });
+  tl.set("#bg", { transformOrigin: "50% 50%", force3D: true });
   tl.to([".lastLine, .logo"],0.5,{ autoAlpha: 0, ease: Power1.easeInOut },"+=2.5");
-  tl.to("#bg", 1, { x: 110, y: -7, scale: 1.44, ease: "power1.inOut"});
+  tl.to("#bg", 1, {
+    x: 110,
+    y: -7,
+    scale: 1.44,
+    ease: "power1.inOut",
+    force3D: true // Hint browser to use GPU
+  });
   tl.to(".copy", 0.5, { autoAlpha: 1, ease: Power1.easeInOut }, "-=0.5");
 }
 

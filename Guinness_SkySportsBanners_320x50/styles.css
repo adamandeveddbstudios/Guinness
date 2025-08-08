@@ -54,12 +54,11 @@ html, body {
   position: absolute;
   left: -39px;
   top: -1px;
-  will-change: transform;
   display: block;
+  will-change: transform;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  transform-style: flat;
- 
+  transform-style: preserve-3d; /* Use preserve-3d instead of flat */
 }
 .lastLine{
   position: absolute;
