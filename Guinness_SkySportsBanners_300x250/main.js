@@ -1,5 +1,3 @@
-gsap.registerPlugin(SplitText);
-
 // Banner duration timer start time
 var startTime;
 

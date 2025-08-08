@@ -54,6 +54,10 @@ html, body {
     position: absolute;
     transform: translate3d(-65px, -19px, 0);
     will-change: transform;
+
+    display: block;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
 .lastLine{
   position: absolute;
