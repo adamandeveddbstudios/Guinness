@@ -18,14 +18,8 @@ function init() {
 
 function animate() {
   tl.set("#main", { autoAlpha: 1 });
-  tl.set("#bg", { x: -65, y: -19, scale: 1, transformOrigin: "0px 0px", force3D: false });
   tl.to([".lastLine, .logo"],0.5,{ autoAlpha: 0, ease: Power1.easeInOut },"+=2.5");
-  tl.to("#bg", 1, {
-  x: -69,
-  y: -51, 
-  scale: 1.55,
-  ease: "power1.inOut"
-});
+  tl.to("#bg", 1, { x: 110, y: -7, scale: 1.44, ease: "power1.inOut"});
   tl.to(".copy", 0.5, { autoAlpha: 1, ease: Power1.easeInOut }, "-=0.5");
 }
 

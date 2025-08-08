@@ -50,14 +50,11 @@ html, body {
   height: auto;
 }
 .bg{
-   width: 429px;
+  width: 385px;
   position: absolute;
-  left: 0;
-  top: 0;
-
-  transform-origin: 0px 0px; /* anchor scale to top-left */
+  left: -39px;
+  top: -1px;
   will-change: transform;
-
   display: block;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
