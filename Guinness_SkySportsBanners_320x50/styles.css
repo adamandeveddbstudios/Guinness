@@ -58,6 +58,8 @@ html, body {
     display: block;
     backface-visibility: hidden;
     transform-style: preserve-3d;
+    left: 0px;
+    top: 0px;
 }
 .lastLine{
   position: absolute;
